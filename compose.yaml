@@ -1,0 +1,8 @@
+services:
+  test:
+    build: tools
+    image: orb-bundam-tools
+    working_dir: /orb
+    volumes:
+      - .:/orb:ro
+    command: ["sh", "tools/check.sh"]

@@ -1,0 +1,23 @@
+# Подрепозитории проекта orb-bundam. Клоны — в repos/<name>.
+# status: active — развивается; source — источник для переноса, не развивается; archive — только чтение.
+repos:
+  - name: bhendho
+    url: git@github.com:vlad78831457/bhendho.git
+    role: ядро — Go, контракты, SDK
+    status: active
+    strict: true
+    version: main
+
+  - name: r-aaa-core-a
+    url: git@github.com:vlad78831457/r-aaa-core-a.git
+    role: платформа v0.1.0 — ядро и модули алгоритмов, склада, тьюторов, сказок
+    status: source
+    strict: false
+    version: main
+
+  - name: taleweaver-app-vr-ab
+    url: git@github.com:vlad78831457/taleweaver-app-vr-ab.git
+    role: продукт Taleweaver — ядро с промокодами, OAuth, кабинетом, файлами; экран сказки; выкладка
+    status: source
+    strict: false
+    version: main
