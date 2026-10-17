@@ -13,7 +13,7 @@
 |---|---|---|
 | [bhendho](https://github.com/vlad78831457/bhendho) | ядро: Go, контракты, SDK | создаётся |
 | r-aaa-core-a | платформа v0.1.0: ядро + четыре модуля | источник для bhendho |
-| taleweaver-app-vr-ab | продукт Taleweaver | источник улучшений ядра |
+| taleweaver-app-vr-ac | снимок системы сказок для друга (было `taleweaver-app-vr-ab`) | снимок `orb-tale-*`, ядро по тегу |
 
 ## Как читать
 
