@@ -7,3 +7,4 @@
 - `docs/think/ae-next-steps.md` — шаги после v0.1.0.
 - `docs/think/af-evolution.md` — эволюция экосистемы: сферы услуг как конструктор.
 - `docs/think/ao-director.md` — устройство работы: штаб, проекты, подрепозитории.
+- `think/az-man-plan.md` — план мануала (`man/bhendho`, `man/tale`, md + mermaid) и обновления репозитория.
