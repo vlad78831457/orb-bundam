@@ -11,13 +11,13 @@ flowchart TB
   s["screen/ — экран (TypeScript)"]
   robo["orb-tale-pay-robo (Go)"]
   stripe["orb-tale-pay-stripe (Go)"]
-  core["bhendho @ v0.3.0"]
+  core["bhendho @ v0.3.1"]
   sdkpy["pkg/sdk/python"]
   sdkts["pkg/sdk/ts"]
   eco -- "make sync: клоны в repos/" --> servo & robo & stripe & core
   servo --- w & s
-  w -- "Dockerfile: BHENDHO_SDK_REF=v0.3.0" --> sdkpy
-  s -- "Dockerfile: BHENDHO_REF=v0.3.0" --> sdkts
+  w -- "Dockerfile: BHENDHO_SDK_REF=v0.3.1" --> sdkpy
+  s -- "Dockerfile: BHENDHO_REF=v0.3.1" --> sdkts
   core --- sdkpy & sdkts
   ac["taleweaver-app-vr-ac"] -. "снимок файлов" .- eco
   ad["taleweaver-app-vr-ad"] -. "снимок файлов, PAY=stripe" .- eco
@@ -29,12 +29,12 @@ flowchart TB
 | [orb-tale-servo](https://github.com/vlad78831457/orb-tale-servo/tree/main/worker) | Python, TypeScript | прораб сказок и экран | `make test`: ruff, mypy, pytest; tsc, vitest |
 | [orb-tale-pay-robo](https://github.com/vlad78831457/orb-tale-pay-robo/blob/main/main.go) | Go, только стандартная библиотека | оплата Робокассой | `make test` |
 | [orb-tale-pay-stripe](https://github.com/vlad78831457/orb-tale-pay-stripe/blob/main/main.go) | Go, только стандартная библиотека | оплата Stripe | `make test` |
-| [bhendho](https://github.com/vlad78831457/bhendho/tree/v0.3.0) | Go, Python и TS SDK | ядро — [часть «Ядро»](../bhendho/README.md) | `make test` |
+| [bhendho](https://github.com/vlad78831457/bhendho/tree/v0.3.1) | Go, Python и TS SDK | ядро — [часть «Ядро»](../bhendho/README.md) | `make test` |
 
 ## Версии
 
 - **Ядро — по тегу.** Тег записан в трёх местах:
-  - [repos.yaml](https://github.com/vlad78831457/orb-tale-eco/blob/main/repos.yaml) (`version: v0.3.0`);
+  - [repos.yaml](https://github.com/vlad78831457/orb-tale-eco/blob/main/repos.yaml) (`version: v0.3.1`);
   - [worker/Dockerfile](https://github.com/vlad78831457/orb-tale-servo/blob/main/worker/Dockerfile) (`BHENDHO_SDK_REF`);
   - [screen/Dockerfile](https://github.com/vlad78831457/orb-tale-servo/blob/main/screen/Dockerfile) (`BHENDHO_REF`).
 

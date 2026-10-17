@@ -78,16 +78,16 @@ sequenceDiagram
 
 | Файл | Функция | Что |
 |---|---|---|
-| [engine/facts.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/facts.go) | `CreateFact`, `UpdateFact`, `PublishFact`, `DeleteFact`, `GetFact`, `ListFacts` | версии и статусы |
-| [engine/resultfact.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/resultfact.go) | `applyResult` | результат задачи → факт или версия |
-| [engine/servicefacts.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/servicefacts.go) | `prepareServiceFacts` | память подразделения из отчёта |
-| [engine/shares.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/shares.go) | `CreateShare`, `Shared`, `CopyShared`, `RevokeShare` | ссылки и копии |
-| [forms/forms.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/forms/forms.go) | — | проверка значений по `fields_rules` |
+| [engine/facts.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/facts.go) | `CreateFact`, `UpdateFact`, `PublishFact`, `DeleteFact`, `GetFact`, `ListFacts` | версии и статусы |
+| [engine/resultfact.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/resultfact.go) | `applyResult` | результат задачи → факт или версия |
+| [engine/servicefacts.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/servicefacts.go) | `prepareServiceFacts` | память подразделения из отчёта |
+| [engine/shares.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/shares.go) | `CreateShare`, `Shared`, `CopyShared`, `RevokeShare` | ссылки и копии |
+| [forms/forms.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/forms/forms.go) | — | проверка значений по `fields_rules` |
 
 ## Как проверить
 
-- Тесты: [resultfact_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/resultfact_test.go),
-  [servicefacts_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/servicefacts_test.go),
-  [shares_e2e_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/shares_e2e_test.go).
+- Тесты: [resultfact_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/resultfact_test.go),
+  [servicefacts_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/servicefacts_test.go),
+  [shares_e2e_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/shares_e2e_test.go).
 - E2E сказки: `published_version == 3`, версии `published, archived, archived`
   ([test_tale_e2e.py](https://github.com/vlad78831457/orb-tale-servo/blob/main/worker/tests/e2e/test_tale_e2e.py)).

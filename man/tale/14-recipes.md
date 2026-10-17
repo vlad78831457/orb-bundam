@@ -52,7 +52,7 @@
 
 ## 6. Новое подразделение (не сказки)
 
-1. Скопировать [templates/department/](https://github.com/vlad78831457/bhendho/tree/v0.3.0/templates/department) в новый репозиторий.
+1. Скопировать [templates/department/](https://github.com/vlad78831457/bhendho/tree/v0.3.1/templates/department) в новый репозиторий.
 2. Заменить `example` на свой код; бланки; `make check` → `core check-module`.
 3. Обработчик `handle` и тест без ядра (`make test`).
 4. Сервис в `deploy/compose.yaml` с `CORE_URL`, `WORKER_TOKEN`, `MODULE_DIR`. Ключ — в панели.

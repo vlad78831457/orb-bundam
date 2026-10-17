@@ -22,7 +22,7 @@ flowchart LR
 
 ## Паспорт `module.yaml`
 
-Схема — [module_schema.json](https://github.com/vlad78831457/bhendho/blob/v0.3.0/contracts/manifests/module_schema.json).
+Схема — [module_schema.json](https://github.com/vlad78831457/bhendho/blob/v0.3.1/contracts/manifests/module_schema.json).
 
 | Поле | Что | Пример сказок |
 |---|---|---|
@@ -79,7 +79,7 @@ flowchart LR
 | `mix` | свободное значение | — |
 
 Одни и те же правила проверяют три вещи: ввод человека, создание задачи и **результат прораба**. Код —
-[forms/forms.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/forms/forms.go).
+[forms/forms.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/forms/forms.go).
 
 ## Что ядро проверяет при регистрации
 
@@ -106,7 +106,7 @@ core check-module <каталог module/>     # те же проверки, б�
 
 ## Заготовка нового подразделения
 
-[templates/department/](https://github.com/vlad78831457/bhendho/tree/v0.3.0/templates/department):
+[templates/department/](https://github.com/vlad78831457/bhendho/tree/v0.3.1/templates/department):
 
 | Что | Где |
 |---|---|
@@ -122,8 +122,8 @@ core check-module <каталог module/>     # те же проверки, б�
 
 | Файл | Функция | Что |
 |---|---|---|
-| [modules/modules.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/modules/modules.go) | `Load`, `Parse`, `ParseForm`, `checkResult`, `checkViews` | чтение и проверка паспорта |
-| [forms/forms.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/forms/forms.go) | `CheckRules` и проверка значений | правила полей |
-| [engine/services.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/services.go) | `RegisterModule` | сервис и бланки в каталог |
-| [contracts/manifests/module_schema.json](https://github.com/vlad78831457/bhendho/blob/v0.3.0/contracts/manifests/module_schema.json) | — | схема паспорта |
-| [cmd/core/main.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/cmd/core/main.go) | `check-module` | проверка без базы |
+| [modules/modules.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/modules/modules.go) | `Load`, `Parse`, `ParseForm`, `checkResult`, `checkViews` | чтение и проверка паспорта |
+| [forms/forms.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/forms/forms.go) | `CheckRules` и проверка значений | правила полей |
+| [engine/services.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/services.go) | `RegisterModule` | сервис и бланки в каталог |
+| [contracts/manifests/module_schema.json](https://github.com/vlad78831457/bhendho/blob/v0.3.1/contracts/manifests/module_schema.json) | — | схема паспорта |
+| [cmd/core/main.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/cmd/core/main.go) | `check-module` | проверка без базы |
