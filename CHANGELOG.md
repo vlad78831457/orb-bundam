@@ -5,3 +5,4 @@
 ## Не выпущено
 
 - каркас проекта: статус, цели G-001…G-004, план, решения P-001 и P-002, `repos.yaml`, `make sync`, `make status`, `make test` (`task/aa-skeleton`).
+- `taleweaver-app-vr-ab` переименован в `taleweaver-app-vr-ac` — снимок системы сказок для друга (`task/ay-rename-vr-ac`).
