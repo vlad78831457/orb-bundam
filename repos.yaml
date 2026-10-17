@@ -1,12 +1,13 @@
 # Подрепозитории проекта orb-bundam. Клоны — в repos/<name>.
-# status: active — развивается; source — источник для переноса, не развивается; archive — только чтение.
+# status: active — развивается; source — источник для переноса, не развивается; archive — только чтение;
+# ref — чужой проект, клон только для мануала (man/), здесь не меняется.
 repos:
   - name: bhendho
     url: git@github.com:vlad78831457/bhendho.git
     role: ядро — Go, контракты, SDK
     status: active
     strict: true
-    version: main
+    version: v0.3.0
 
   - name: r-aaa-core-a
     url: git@github.com:vlad78831457/r-aaa-core-a.git
@@ -19,5 +20,40 @@ repos:
     url: git@github.com:vlad78831457/taleweaver-app-vr-ac.git
     role: снимок системы сказок для друга (было taleweaver-app-vr-ab); главные — orb-tale-*
     status: source
+    strict: false
+    version: main
+
+  - name: taleweaver-app-vr-ad
+    url: git@github.com:vlad78831457/taleweaver-app-vr-ad.git
+    role: снимок системы сказок для друга, зарубежный контур (Stripe); главные — orb-tale-*
+    status: source
+    strict: false
+    version: main
+
+  - name: orb-tale-eco
+    url: git@github.com:vlad78831457/orb-tale-eco.git
+    role: экосистема сказок — сборка, e2e, развёртывание; описана в man/tale
+    status: ref
+    strict: false
+    version: main
+
+  - name: orb-tale-servo
+    url: git@github.com:vlad78831457/orb-tale-servo.git
+    role: подразделение сказок — прораб, воркер, экран; описано в man/tale
+    status: ref
+    strict: false
+    version: main
+
+  - name: orb-tale-pay-robo
+    url: git@github.com:vlad78831457/orb-tale-pay-robo.git
+    role: оплата Робокассой; описана в man/tale
+    status: ref
+    strict: false
+    version: main
+
+  - name: orb-tale-pay-stripe
+    url: git@github.com:vlad78831457/orb-tale-pay-stripe.git
+    role: оплата Stripe; описана в man/tale
+    status: ref
     strict: false
     version: main

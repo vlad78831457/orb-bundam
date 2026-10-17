@@ -10,6 +10,7 @@ sync: ## клонировать или обновить repos/ по repos.yaml
 status: ## ветка, отставание и незакоммиченное в каждом подрепозитории
 	@sh tools/status.sh
 
-test: ## проверка репозитория (Docker)
+test: ## проверка репозитория: файлы, ссылки, пути кода в мануале, секреты, схемы (Docker)
 	docker compose build -q test
 	docker compose run --rm test
+	docker compose run --rm mermaid
