@@ -7,7 +7,7 @@ repos:
     role: ядро — Go, контракты, SDK
     status: active
     strict: true
-    version: v0.3.0
+    version: v0.3.1
 
   - name: r-aaa-core-a
     url: git@github.com:vlad78831457/r-aaa-core-a.git

@@ -1,7 +1,7 @@
 # Данные
 
 **Зачем это.** Всё состояние системы — в одной базе Postgres. Здесь таблицы ядра по группам и связи между ними.
-Схема строится 21 миграцией — [db/migrations/](https://github.com/vlad78831457/bhendho/tree/v0.3.0/internal/core/db/migrations),
+Схема строится 21 миграцией — [db/migrations/](https://github.com/vlad78831457/bhendho/tree/v0.3.1/internal/core/db/migrations),
 от `0001_core.sql` до `0021_prorab_info.sql`. Ядро запускает их само при старте.
 
 Подразделения своей базы в ядре не имеют. Их данные — факты пользователей и память подразделения

@@ -45,7 +45,7 @@ flowchart LR
 
 ## Панель админа `/admin/`
 
-Это фронт ядра ([web/src/pages/Admin.tsx](https://github.com/vlad78831457/bhendho/blob/v0.3.0/web/src/pages/Admin.tsx)).
+Это фронт ядра ([web/src/pages/Admin.tsx](https://github.com/vlad78831457/bhendho/blob/v0.3.1/web/src/pages/Admin.tsx)).
 Пускает только роль `admin`, роль выдаётся на сервере.
 
 | Раздел | Что | Адрес API |
@@ -64,12 +64,12 @@ flowchart LR
 
 | Файл | Что |
 |---|---|
-| [engine/views.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/views.go) | разметка включённых подразделений |
-| [modules/modules.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/modules/modules.go) | `View`, `checkViews` — проверка ссылок разметки |
-| [pkg/sdk/ts/src/views.ts](https://github.com/vlad78831457/bhendho/blob/v0.3.0/pkg/sdk/ts/src/views.ts) | SDK фронта: типы и отрисовка |
-| [engine/showcase.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/showcase.go) | витрина |
-| [engine/admin.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/admin.go), [engine/export.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/export.go) | панель, выгрузка |
-| [httpapi/admin.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/admin.go) | адреса панели, проверка роли |
-| [web/src/](https://github.com/vlad78831457/bhendho/tree/v0.3.0/web/src) | фронт ядра (React): `App.tsx` — маршруты `#/…`, `pages/Admin.tsx` |
+| [engine/views.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/views.go) | разметка включённых подразделений |
+| [modules/modules.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/modules/modules.go) | `View`, `checkViews` — проверка ссылок разметки |
+| [pkg/sdk/ts/src/views.ts](https://github.com/vlad78831457/bhendho/blob/v0.3.1/pkg/sdk/ts/src/views.ts) | SDK фронта: типы и отрисовка |
+| [engine/showcase.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/showcase.go) | витрина |
+| [engine/admin.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/admin.go), [engine/export.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/export.go) | панель, выгрузка |
+| [httpapi/admin.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/admin.go) | адреса панели, проверка роли |
+| [web/src/](https://github.com/vlad78831457/bhendho/tree/v0.3.1/web/src) | фронт ядра (React): `App.tsx` — маршруты `#/…`, `pages/Admin.tsx` |
 
 Как это выглядит — скриншоты панели в `SCREENS.md` снимков `taleweaver-app-vr-ac` и `vr-ad`.

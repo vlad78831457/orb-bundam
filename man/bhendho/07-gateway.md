@@ -85,7 +85,7 @@ sequenceDiagram
 
 ## Что приходит в задаче
 
-`ClaimedTask` (типы — [models.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/pkg/sdk/python/src/offgrid_worker/models.py)):
+`ClaimedTask` (типы — [models.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/pkg/sdk/python/src/offgrid_worker/models.py)):
 
 | Поле | Что |
 |---|---|
@@ -117,20 +117,18 @@ sequenceDiagram
 
 | Файл | Функция | Что |
 |---|---|---|
-| [engine/departments.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/departments.go) | `IssueDepartmentKey`, `RegisterDepartment`, `SetServiceEnabled`, `DepartmentKeys` | ключи, регистрация, выключатель |
-| [engine/gateway.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/gateway.go) | `Claim`, `materialize`, `Accept`, `Heartbeat`, `Progress`, `Commit`, `settle` | цикл задачи |
-| [engine/prorabs.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/prorabs.go) | — | приоритеты, «кто есть кто» |
-| [httpapi/departments.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/departments.go) | — | адрес `register` |
-| [httpapi/httpapi.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/httpapi.go) | — | адреса шлюза, проверка ключа |
-| [contracts/interfaces/worker_gateway.openapi.yaml](https://github.com/vlad78831457/bhendho/blob/v0.3.0/contracts/interfaces/worker_gateway.openapi.yaml) | — | контракт шлюза |
+| [engine/departments.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/departments.go) | `IssueDepartmentKey`, `RegisterDepartment`, `SetServiceEnabled`, `DepartmentKeys` | ключи, регистрация, выключатель |
+| [engine/gateway.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/gateway.go) | `Claim`, `materialize`, `Accept`, `Heartbeat`, `Progress`, `Commit`, `settle` | цикл задачи |
+| [engine/prorabs.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/prorabs.go) | — | приоритеты, «кто есть кто» |
+| [httpapi/departments.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/departments.go) | — | адрес `register` |
+| [httpapi/httpapi.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/httpapi.go) | — | адреса шлюза, проверка ключа |
+| [contracts/interfaces/worker_gateway.openapi.yaml](https://github.com/vlad78831457/bhendho/blob/v0.3.1/contracts/interfaces/worker_gateway.openapi.yaml) | — | контракт шлюза |
 
-> **Контракт регистрации.** В теге `v0.3.0` контракта для `POST /gateway/v1/register` ещё нет — описание выше
-> составлено по коду. В `main` ядра он дописан ([bhendho PR #24](https://github.com/vlad78831457/bhendho/pull/24),
-> контракт 0.2.0: `RegisterRequest`, `Registered`, ответы 401, 403, 422). Войдёт в следующий выпуск ядра.
-> Поведение ядра не менялось.
+> **Контракт регистрации** — с выпуска `v0.3.1` (контракт 0.2.0: `RegisterRequest`, `Registered`, ответы 401, 403,
+> 422). В `v0.3.0` и раньше регистрация работала так же, но в контракте не была описана.
 
 ## Как проверить
 
-- Тест подключения: [departments_e2e_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/departments_e2e_test.go)
+- Тест подключения: [departments_e2e_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/departments_e2e_test.go)
   — неверный ключ, чужой паспорт, сломанный паспорт, успех, задача без перезапуска.
 - `make e2e` в `orb-tale-eco`: прораб сказок подключается по ключу из панели; перезапуск только прораба.

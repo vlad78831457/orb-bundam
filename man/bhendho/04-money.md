@@ -69,7 +69,7 @@ sequenceDiagram
 
 ## Тарифы
 
-Админ меняет в панели ([tariffs.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/tariffs.go), ADR-69):
+Админ меняет в панели ([tariffs.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/tariffs.go), ADR-69):
 
 | Что | Ключ | Действует |
 |---|---|---|
@@ -98,15 +98,15 @@ sequenceDiagram
 
 | Файл | Функция | Что |
 |---|---|---|
-| [engine/tasks.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/tasks.go) | `insertTask` | резерв, проверка «хватает ли», фиксация курсов и множителя |
-| [engine/tasks.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/tasks.go) | `failTask`, `releaseReserve` | отказ и возврат резерва |
-| [engine/gateway.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/gateway.go) | `settle` | расчёт по отчёту, проводки `charge`, `overcharge`, `income`, `release` |
-| [money/accountant.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/money/accountant.go) | `Settle`, `Rates`, `Bill` | формула выше |
-| [engine/wallets.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/wallets.go) | `Wallets`, `Transactions`, `DemoDeposit` | кошелёк и история для фронта, демо-пополнение |
-| [engine/tariffs.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/tariffs.go) | — | тарифы |
+| [engine/tasks.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/tasks.go) | `insertTask` | резерв, проверка «хватает ли», фиксация курсов и множителя |
+| [engine/tasks.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/tasks.go) | `failTask`, `releaseReserve` | отказ и возврат резерва |
+| [engine/gateway.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/gateway.go) | `settle` | расчёт по отчёту, проводки `charge`, `overcharge`, `income`, `release` |
+| [money/accountant.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/money/accountant.go) | `Settle`, `Rates`, `Bill` | формула выше |
+| [engine/wallets.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/wallets.go) | `Wallets`, `Transactions`, `DemoDeposit` | кошелёк и история для фронта, демо-пополнение |
+| [engine/tariffs.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/tariffs.go) | — | тарифы |
 
 ## Как проверить
 
-- Тесты ядра: [overdraft_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/overdraft_test.go), [tariffs_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/tariffs_test.go).
+- Тесты ядра: [overdraft_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/overdraft_test.go), [tariffs_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/tariffs_test.go).
 - `make e2e` в `orb-tale-eco`: «списано по факту, осталось … GC».
 - Руками: кабинет → «Баланс и история».

@@ -1,6 +1,6 @@
 # Карта решений (ADR)
 
-Все решения ядра — [02-decisions.md](https://github.com/vlad78831457/bhendho/blob/v0.3.0/docs/specifications/02-decisions.md),
+Все решения ядра — [02-decisions.md](https://github.com/vlad78831457/bhendho/blob/v0.3.1/docs/specifications/02-decisions.md),
 ADR-01…77. Здесь они сгруппированы по темам, у каждого строка «что решено» и глава мануала. Отмечены решения,
 которые позже заменены.
 

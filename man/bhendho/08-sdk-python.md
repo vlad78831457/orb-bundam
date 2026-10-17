@@ -5,11 +5,11 @@
 считает расход в своих единицах и возвращает результат.
 
 SDK берут из ядра по тегу, в Dockerfile воркера (`BHENDHO_SDK_REF`). Код —
-[pkg/sdk/python/src/offgrid_worker/](https://github.com/vlad78831457/bhendho/tree/v0.3.0/pkg/sdk/python/src/offgrid_worker).
+[pkg/sdk/python/src/offgrid_worker/](https://github.com/vlad78831457/bhendho/tree/v0.3.1/pkg/sdk/python/src/offgrid_worker).
 
 ## Самый короткий прораб
 
-Из заготовки подразделения ([templates/department/worker/src/department/main.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/templates/department/worker/src/department/main.py)):
+Из заготовки подразделения ([templates/department/worker/src/department/main.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/templates/department/worker/src/department/main.py)):
 
 ```python
 async def handle(ctx: TaskContext) -> Outcome:
@@ -117,14 +117,14 @@ OpenAI-совместимого API. `explain` и `invented_numbers` прове�
 
 | Файл | Что |
 |---|---|
-| [worker.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/pkg/sdk/python/src/offgrid_worker/worker.py) | `Worker`, `WorkerConfig`, `TaskContext`, `Outcome`, `Decline`, `DataRejected`, `TaskError` |
-| [client.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/pkg/sdk/python/src/offgrid_worker/client.py) | `GatewayClient`, ошибки, `RetryPolicy` |
-| [models.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/pkg/sdk/python/src/offgrid_worker/models.py) | `ClaimedTask`, `Blank`, `TaskState`, `Verdict`, `ChargeLine` |
-| [llm.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/pkg/sdk/python/src/offgrid_worker/llm.py) | модели и проверка выдумок |
-| [tests/fake_gateway.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/pkg/sdk/python/tests/fake_gateway.py) | поддельный шлюз для тестов прораба без ядра |
+| [worker.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/pkg/sdk/python/src/offgrid_worker/worker.py) | `Worker`, `WorkerConfig`, `TaskContext`, `Outcome`, `Decline`, `DataRejected`, `TaskError` |
+| [client.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/pkg/sdk/python/src/offgrid_worker/client.py) | `GatewayClient`, ошибки, `RetryPolicy` |
+| [models.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/pkg/sdk/python/src/offgrid_worker/models.py) | `ClaimedTask`, `Blank`, `TaskState`, `Verdict`, `ChargeLine` |
+| [llm.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/pkg/sdk/python/src/offgrid_worker/llm.py) | модели и проверка выдумок |
+| [tests/fake_gateway.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/pkg/sdk/python/tests/fake_gateway.py) | поддельный шлюз для тестов прораба без ядра |
 
 ## Как проверить
 
-- Тесты SDK: [tests/test_sdk.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/pkg/sdk/python/tests/test_sdk.py) — на поддельном шлюзе.
+- Тесты SDK: [tests/test_sdk.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/pkg/sdk/python/tests/test_sdk.py) — на поддельном шлюзе.
 - Свой обработчик — без ядра, как в заготовке:
-  [test_handle.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/templates/department/worker/tests/test_handle.py).
+  [test_handle.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/templates/department/worker/tests/test_handle.py).

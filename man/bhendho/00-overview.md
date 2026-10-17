@@ -65,10 +65,10 @@ sequenceDiagram
 
 | Что | Где |
 |---|---|
-| вход программы | [cmd/core/main.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/cmd/core/main.go) |
-| логика | [internal/core/engine/](https://github.com/vlad78831457/bhendho/tree/v0.3.0/internal/core/engine) |
-| адреса HTTP | [internal/core/httpapi/](https://github.com/vlad78831457/bhendho/tree/v0.3.0/internal/core/httpapi) |
-| контракты | [contracts/](https://github.com/vlad78831457/bhendho/tree/v0.3.0/contracts) |
-| решения | [docs/specifications/02-decisions.md](https://github.com/vlad78831457/bhendho/blob/v0.3.0/docs/specifications/02-decisions.md) — ADR-01…77, карта — [15-adr-map](15-adr-map.md) |
+| вход программы | [cmd/core/main.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/cmd/core/main.go) |
+| логика | [internal/core/engine/](https://github.com/vlad78831457/bhendho/tree/v0.3.1/internal/core/engine) |
+| адреса HTTP | [internal/core/httpapi/](https://github.com/vlad78831457/bhendho/tree/v0.3.1/internal/core/httpapi) |
+| контракты | [contracts/](https://github.com/vlad78831457/bhendho/tree/v0.3.1/contracts) |
+| решения | [docs/specifications/02-decisions.md](https://github.com/vlad78831457/bhendho/blob/v0.3.1/docs/specifications/02-decisions.md) — ADR-01…77, карта — [15-adr-map](15-adr-map.md) |
 
 Полный список файлов — [карта кода](../map.md#bhendho--ядро).

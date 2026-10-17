@@ -2,7 +2,7 @@
 
 **Зачем это.** Все адреса ядра в одном месте: кто ими пользуется, чем входит, где обработчик. Тела и ответы —
 в контрактах и коде обработчиков. Все маршруты регистрируются в
-[httpapi/httpapi.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/httpapi.go).
+[httpapi/httpapi.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/httpapi.go).
 
 ```mermaid
 flowchart LR
@@ -71,8 +71,8 @@ flowchart LR
 
 | Файл | Что |
 |---|---|
-| [httpapi.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/httpapi.go) | маршруты, проверка токенов, клиентский API, шлюз |
-| [admin.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/admin.go), [departments.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/departments.go) | панель, подразделения |
-| [promo.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/promo.go) | эмитент и коды |
-| [oauth.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/oauth.go) | внешний вход |
-| [files.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/files.go), [shares.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/shares.go), [showcase.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/showcase.go) | файлы, ссылки, витрина |
+| [httpapi.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/httpapi.go) | маршруты, проверка токенов, клиентский API, шлюз |
+| [admin.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/admin.go), [departments.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/departments.go) | панель, подразделения |
+| [promo.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/promo.go) | эмитент и коды |
+| [oauth.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/oauth.go) | внешний вход |
+| [files.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/files.go), [shares.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/shares.go), [showcase.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/showcase.go) | файлы, ссылки, витрина |

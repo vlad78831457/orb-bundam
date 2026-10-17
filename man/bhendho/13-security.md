@@ -69,8 +69,8 @@ flowchart LR
 
 | Файл | Что |
 |---|---|
-| [auth/auth.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/auth/auth.go) | пароли, токены, ротация |
-| [auth/roles.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/auth/roles.go) | роли |
-| [auth/oauth_flow.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/auth/oauth_flow.go) | вход через внешние аккаунты |
-| [files/sign.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/files/sign.go), [files/image.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/files/image.go) | подписи ссылок, пересохранение картинок |
-| [docs/OAUTH.md](https://github.com/vlad78831457/bhendho/blob/v0.3.0/docs/OAUTH.md) | как получить ключи Google и VK ID |
+| [auth/auth.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/auth/auth.go) | пароли, токены, ротация |
+| [auth/roles.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/auth/roles.go) | роли |
+| [auth/oauth_flow.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/auth/oauth_flow.go) | вход через внешние аккаунты |
+| [files/sign.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/files/sign.go), [files/image.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/files/image.go) | подписи ссылок, пересохранение картинок |
+| [docs/OAUTH.md](https://github.com/vlad78831457/bhendho/blob/v0.3.1/docs/OAUTH.md) | как получить ключи Google и VK ID |

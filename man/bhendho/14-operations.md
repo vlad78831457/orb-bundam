@@ -4,7 +4,7 @@
 
 ## Команды `core`
 
-Одна программа, подкоманды — [cmd/core/main.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/cmd/core/main.go).
+Одна программа, подкоманды — [cmd/core/main.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/cmd/core/main.go).
 В сборке их зовут так: `docker compose -f deploy/compose.yaml exec core /core <команда>`.
 
 | Команда | Что |
@@ -20,7 +20,7 @@
 
 ## Настройки
 
-Все числа — переменные `CORE_…` ([config.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/config/config.go)).
+Все числа — переменные `CORE_…` ([config.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/config/config.go)).
 Действующие значения без секретов — панель → «Настройки».
 
 | Группа | Переменные |
@@ -47,7 +47,7 @@
 - `bhendho` — **строгий** открытый репозиторий: каждое изменение — отдельный PR с отчётом. Директор вливает.
 - Выпуск — тег `vX.Y.Z` на `main` и выпуск на GitHub. Теги ставятся только по команде директора.
 - Сборки берут ядро **по тегу**:
-  - `orb-tale-eco/repos.yaml`: `version: v0.3.0`;
+  - `orb-tale-eco/repos.yaml`: `version: v0.3.1`;
   - SDK Python — `BHENDHO_SDK_REF` в Dockerfile воркера;
   - SDK фронта — `BHENDHO_REF` в Dockerfile экрана.
 - Обновить ядро в сборке — поменять тег в трёх местах и прогнать `make e2e`

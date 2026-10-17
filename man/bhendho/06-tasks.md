@@ -26,7 +26,7 @@ stateDiagram-v2
 
 В схеме есть ещё статусы `draft` и `template` (заготовки), но в этом процессе они не участвуют.
 
-**Команды пользователя** — матрица в [fsm.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/fsm/fsm.go):
+**Команды пользователя** — матрица в [fsm.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/fsm/fsm.go):
 - `cancel` — только из `pending`;
 - `retry` — только из `failed`, и только если вердикт по вине исполнения (`codes.Retryable`). После
   `DATA_REJECTED` повтора нет: менять надо данные.
@@ -117,17 +117,17 @@ flowchart TD
 
 | Файл | Функция | Что |
 |---|---|---|
-| [engine/tasks.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/tasks.go) | `CreateTask`, `insertTask`, `checkTaskRefs`, `Command`, `failTask`, `GetTask`, `ListTasks` | создание, команды, отказ |
-| [engine/gateway.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/gateway.go) | `Claim`, `materialize`, `Accept`, `Heartbeat`, `Progress`, `Commit`, `settle` | работа с прорабом |
-| [engine/sweeper.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/sweeper.go) | `SweepExpired`, `Cleanup`, `RunBackground` | срок, попытки, чистка |
-| [fsm/fsm.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/fsm/fsm.go) | `Allowed`, `Envelope` | какие команды можно |
-| [codes/codes.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/codes/codes.go) | `Retryable` | коды и можно ли повторить |
-| [outbox/outbox.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/outbox/outbox.go), [realtime/realtime.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/realtime/realtime.go) | — | доставка событий |
+| [engine/tasks.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/tasks.go) | `CreateTask`, `insertTask`, `checkTaskRefs`, `Command`, `failTask`, `GetTask`, `ListTasks` | создание, команды, отказ |
+| [engine/gateway.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/gateway.go) | `Claim`, `materialize`, `Accept`, `Heartbeat`, `Progress`, `Commit`, `settle` | работа с прорабом |
+| [engine/sweeper.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/sweeper.go) | `SweepExpired`, `Cleanup`, `RunBackground` | срок, попытки, чистка |
+| [fsm/fsm.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/fsm/fsm.go) | `Allowed`, `Envelope` | какие команды можно |
+| [codes/codes.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/codes/codes.go) | `Retryable` | коды и можно ли повторить |
+| [outbox/outbox.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/outbox/outbox.go), [realtime/realtime.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/realtime/realtime.go) | — | доставка событий |
 
 ## Как проверить
 
-- Тесты: [engine_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/engine_test.go),
-  [prorabs_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/prorabs_test.go).
+- Тесты: [engine_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/engine_test.go),
+  [prorabs_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/prorabs_test.go).
 - Таблица задач и трасса на живой системе:
   `SELECT status, verdict, attempts FROM system_tasks ORDER BY created_at DESC LIMIT 5;`,
   `SELECT stage, actor, code FROM task_trace WHERE task_id = '…' ORDER BY at;`.

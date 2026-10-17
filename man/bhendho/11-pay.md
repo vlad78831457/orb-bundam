@@ -50,7 +50,7 @@ sequenceDiagram
 
 ## Контракт эмитента
 
-[promo_issuer.openapi.yaml](https://github.com/vlad78831457/bhendho/blob/v0.3.0/contracts/interfaces/promo_issuer.openapi.yaml):
+[promo_issuer.openapi.yaml](https://github.com/vlad78831457/bhendho/blob/v0.3.1/contracts/interfaces/promo_issuer.openapi.yaml):
 
 | Адрес | Что |
 |---|---|
@@ -64,16 +64,16 @@ sequenceDiagram
 
 | Файл | Функция | Что |
 |---|---|---|
-| [engine/topup.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/topup.go) | — | метки «Пополнить», погашение по метке |
-| [engine/promo.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/promo.go) | `IssuePromo`, `RedeemPromo`, `RedeemPromoFor`, `RevokePromo`, `NewPromoCode` | коды и эмитенты |
-| [httpapi/promo.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/promo.go) | — | адреса эмитента и ввода кода |
-| [docs/PROMO.md](https://github.com/vlad78831457/bhendho/blob/v0.3.0/docs/PROMO.md) | — | объяснение промокодов для людей |
+| [engine/topup.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/topup.go) | — | метки «Пополнить», погашение по метке |
+| [engine/promo.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/promo.go) | `IssuePromo`, `RedeemPromo`, `RedeemPromoFor`, `RevokePromo`, `NewPromoCode` | коды и эмитенты |
+| [httpapi/promo.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/httpapi/promo.go) | — | адреса эмитента и ввода кода |
+| [docs/PROMO.md](https://github.com/vlad78831457/bhendho/blob/v0.3.1/docs/PROMO.md) | — | объяснение промокодов для людей |
 
 Касса со стороны службы оплаты — [tale/11-payments](../tale/11-payments.md).
 
 ## Как проверить
 
-- Тесты: [promo_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/promo_test.go), [topup_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/topup_test.go).
+- Тесты: [promo_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/promo_test.go), [topup_test.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/topup_test.go).
 - `make e2e` в `orb-tale-eco`:
   - касса получила OK;
   - на счёте 500 GC;

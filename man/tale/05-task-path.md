@@ -62,7 +62,7 @@ sequenceDiagram
 
 ### 2. Ядро: принять задачу
 
-[engine/tasks.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/tasks.go) `CreateTask`:
+[engine/tasks.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/tasks.go) `CreateTask`:
 1. поля по `fields_rules`;
 2. герои опубликованы;
 3. резерв 150 GC;
@@ -74,8 +74,8 @@ sequenceDiagram
 
 | Шаг | Где |
 |---|---|
-| опрос очереди | SDK [worker.py](https://github.com/vlad78831457/bhendho/blob/v0.3.0/pkg/sdk/python/src/offgrid_worker/worker.py) `Worker.run_once` → `GatewayClient.claim` |
-| выбор прораба и снимок | ядро [gateway.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/engine/gateway.go) `Claim`, `materialize` |
+| опрос очереди | SDK [worker.py](https://github.com/vlad78831457/bhendho/blob/v0.3.1/pkg/sdk/python/src/offgrid_worker/worker.py) `Worker.run_once` → `GatewayClient.claim` |
+| выбор прораба и снимок | ядро [gateway.go](https://github.com/vlad78831457/bhendho/blob/v0.3.1/internal/core/engine/gateway.go) `Claim`, `materialize` |
 | оценка | [main.py](https://github.com/vlad78831457/orb-tale-servo/blob/main/worker/src/taleweaver_worker/main.py) `estimate` → `accept(eta)` |
 | обработчик | `main.py` `make_handler` → `handle(ctx)` → фото героев `ctx.file` → `Pipeline.start` |
 
