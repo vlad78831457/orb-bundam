@@ -124,9 +124,10 @@ sequenceDiagram
 | [httpapi/httpapi.go](https://github.com/vlad78831457/bhendho/blob/v0.3.0/internal/core/httpapi/httpapi.go) | — | адреса шлюза, проверка ключа |
 | [contracts/interfaces/worker_gateway.openapi.yaml](https://github.com/vlad78831457/bhendho/blob/v0.3.0/contracts/interfaces/worker_gateway.openapi.yaml) | — | контракт шлюза |
 
-> **Расхождение.** `POST /gateway/v1/register` есть в ядре и тестах, но в контракте `worker_gateway.openapi.yaml`
-> его нет: там только `claim`, `accept`, `heartbeat`, `progress`, `commit` и файлы. Описание выше — по коду.
-> Дописать контракт — PR в `bhendho` после решения директора.
+> **Контракт регистрации.** В теге `v0.3.0` контракта для `POST /gateway/v1/register` ещё нет — описание выше
+> составлено по коду. В `main` ядра он дописан ([bhendho PR #24](https://github.com/vlad78831457/bhendho/pull/24),
+> контракт 0.2.0: `RegisterRequest`, `Registered`, ответы 401, 403, 422). Войдёт в следующий выпуск ядра.
+> Поведение ядра не менялось.
 
 ## Как проверить
 
