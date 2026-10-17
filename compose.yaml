@@ -6,3 +6,11 @@ services:
     volumes:
       - .:/orb:ro
     command: ["sh", "tools/check.sh"]
+
+  # Схемы мануала (man/): каждая mermaid-схема должна собираться.
+  mermaid:
+    image: minlag/mermaid-cli:11.4.2
+    entrypoint: ["sh", "/tools/mermaid.sh"]
+    volumes:
+      - ./man:/man:ro
+      - ./tools:/tools:ro
