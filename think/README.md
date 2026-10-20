@@ -8,3 +8,4 @@
 - `docs/think/af-evolution.md` — эволюция экосистемы: сферы услуг как конструктор.
 - `docs/think/ao-director.md` — устройство работы: штаб, проекты, подрепозитории.
 - `think/az-man-plan.md` — план мануала (`man/bhendho`, `man/tale`, md + mermaid) и обновления репозитория.
+- `think/bj-front-skins.md` — фронт сказок: миры и оформления (скины), вынос фронта из ядра, репозитории web PWA, Android, Apple.
