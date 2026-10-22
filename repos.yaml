@@ -7,7 +7,14 @@ repos:
     role: ядро — Go, контракты, SDK
     status: active
     strict: true
-    version: v0.3.1
+    version: v0.4.0
+
+  - name: bhendho-lik-pwa
+    url: git@github.com:vlad78831457/bhendho-lik-pwa.git
+    role: лик — веб-ядро людей — оформления, выбор человека (план 11.16)
+    status: active
+    strict: false
+    version: main
 
   - name: r-aaa-core-a
     url: git@github.com:vlad78831457/r-aaa-core-a.git
