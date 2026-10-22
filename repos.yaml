@@ -11,7 +11,14 @@ repos:
 
   - name: bhendho-lik-pwa
     url: git@github.com:vlad78831457/bhendho-lik-pwa.git
-    role: лик — веб-ядро людей — оформления, выбор человека (план 11.16)
+    role: лик — веб-ядро людей — страницы, палитра, плеер; движок тем (план 11.16, этап 12)
+    status: active
+    strict: false
+    version: main
+
+  - name: bhendho-lik-skins
+    url: git@github.com:vlad78831457/bhendho-lik-skins.git
+    role: темы оформления лика — отдельно от движка, как страницы у посадочных
     status: active
     strict: false
     version: main
